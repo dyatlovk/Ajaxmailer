@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <!-- Не забыть отключить noindex на продакшне -->
+    <meta name="robots" content="noindex, follow"/>
+
+    <title>Title</title>
+    <meta name="keywords" content="Keywords">
+    <meta name="description" content="Description">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <!-- Scripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.ajaxmail.js"></script>
+</head>
+<body>
+
+
+<div id="send">
+    <p>Ajax форма 1</p>
+
+    <form method="post" action="mailer/cloack.php" id="form">
+        <input type="text" name="name">
+        <input type="text" name="phone">
+        <button type="submit">Отправить</button>
+        <button type="reset">Сбросить</button>
+        <div class="result">
+            <p>Письмо отправлено</p>
+            <span class="close">закрыть</span>
+        </div>
+    </form>
+</div>
+
+
+<script type="text/javascript">
+
+    $("#send").AjaxMail({
+        handlerURL: "mailer/cloack.php",
+        sucessContaner: ".result"
+    });
+
+</script>
+</body>
+</html>
