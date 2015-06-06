@@ -10,4 +10,3 @@ $("#send").AjaxMail();
 handlerURL: "mailer/cloack.php"
 sucessContaner: ".result"
 ```
-```
